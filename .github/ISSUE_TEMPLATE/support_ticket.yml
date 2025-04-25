@@ -1,0 +1,31 @@
+name: Support Ticket
+description: Submit a support request here.
+title: "[SUPPORT] "
+labels: ["support"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Your Name
+      placeholder: Jane Doe
+
+  - type: input
+    id: email
+    attributes:
+      label: Your Email (optional)
+      placeholder: jane@example.com
+
+  - type: textarea
+    id: issue
+    attributes:
+      label: What do you need help with?
+      placeholder: Describe your issue here...
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: Urgency Level
+      options:
+        - Low
+        - Medium
+        - High
