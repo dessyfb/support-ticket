@@ -10,8 +10,9 @@ jobs:
     steps:
       - name: Send Discord notification
         uses: Ilshidur/action-discord@0.3.2
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_URL }}
         with:
-          webhook: ${{ secrets.DISCORD_WEBHOOK_URL }}
           args: |
             **New Support Ticket Created**
             - **Title:** ${{ github.event.issue.title }}
