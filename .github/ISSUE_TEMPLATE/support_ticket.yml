@@ -21,11 +21,6 @@ body:
       label: Your Email (optional)
       placeholder: jane@example.com
 
-  - type: date
-    id: date
-    attributes:
-      label: When did the issue begin? 
-     
   - type: dropdown
     id: type
     attributes:
@@ -42,15 +37,6 @@ body:
       label: What do you need help with?
       placeholder: Please give a detailed description of the issue you are having.  Include the specific location the issue is occurring....
 
-  - type: dropdown
-    id: before
-    attributes:
-      label: Have you experienced this issue before?
-      options:
-        - Yes
-        - No
-        - Maybe
-        
   - type: textarea
     id: steps
     attributes:
