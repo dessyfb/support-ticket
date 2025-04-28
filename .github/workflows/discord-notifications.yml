@@ -17,5 +17,6 @@ jobs:
             - **Title:** ${{ github.event.issue.title }}
             - **User:** ${{ github.event.issue.user.login }}
             - **Link:** ${{ github.event.issue.html_url }}
+          status: 'success' # Provide the required status input
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
