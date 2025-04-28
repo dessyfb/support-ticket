@@ -8,19 +8,55 @@ body:
     attributes:
       label: Your Name
       placeholder: Jane Doe
-
+      
+  - type: input
+    id: cname
+    attributes:
+      label: Company Name
+      placeholder: Amazon...
+      
   - type: input
     id: email
     attributes:
       label: Your Email (optional)
       placeholder: jane@example.com
 
+  - type: date
+    id: date
+    attributes:
+      label: When did the issue begin? 
+     
+  - type: dropdown
+    id: type
+    attributes:
+      label: Issue Type
+      options:
+        - Technical Issue
+        - Account Help
+        - Billing
+        - Product Inquiry
+        
   - type: textarea
     id: issue
     attributes:
       label: What do you need help with?
-      placeholder: Describe your issue here...
+      placeholder: Please give a detailed description of the issue you are having.  Include the specific location the issue is occurring....
 
+  - type: dropdown
+    id: before
+    attributes:
+      label: Have you experienced this issue before?
+      options:
+        - Yes
+        - No
+        - Maybe
+        
+  - type: textarea
+    id: steps
+    attributes:
+      label: What steps have you already taken to try to resolve it?
+      placeholder: Step 1... Step 2... etc.
+      
   - type: dropdown
     id: urgency
     attributes:
@@ -29,3 +65,21 @@ body:
         - Low
         - Medium
         - High
+
+  - type: dropdown
+    id: contact
+    attributes:
+      label: When is the best time to contact you?
+      options:
+        - Morning
+        - Afternoon
+        - Evening
+
+  - type: dropdown
+    id: how
+    attributes:
+      label: How would you like to be contacted?
+      options:
+        - Phone Call
+        - Text
+        - Email
