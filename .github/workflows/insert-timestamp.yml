@@ -38,3 +38,8 @@ jobs:
               issue_number: issue_number,
               body: bodyWithTimestamp
             });
+
+      - name: Assign issue to myself
+        uses: pozil/auto-assign-issue@v1
+        with:
+          assignees: your-github-username  # ⬅️ Replace this with your actual GitHub username
