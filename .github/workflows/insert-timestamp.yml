@@ -42,4 +42,4 @@ jobs:
       - name: Assign issue to myself
         uses: pozil/auto-assign-issue@v1
         with:
-          assignees: dessyf  # ⬅️ Replace this with your actual GitHub username
+          assignees: dessyfb  # ⬅️ Replace this with your actual GitHub username
