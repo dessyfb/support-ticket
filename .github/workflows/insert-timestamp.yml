@@ -16,7 +16,7 @@ jobs:
 
             const now = new Date();
             const options = {
-              timeZone: 'America/Chicago', // Change timezone if needed
+              timeZone: 'America/Chicago',
               month: '2-digit',
               day: '2-digit',
               year: 'numeric',
@@ -30,6 +30,8 @@ jobs:
             const bodyWithTimestamp = `**Ticket Created At:** ${formattedDate}\n\n${context.payload.issue.body}`;
 
             await github.rest.issues.update({
-              ...context.issue,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issue_number,
               body: bodyWithTimestamp
             });
