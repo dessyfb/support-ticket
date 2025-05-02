@@ -55,7 +55,8 @@ jobs:
           script: |
             const issue_number = context.issue.number;
             const issue_body = context.payload.issue.body;
-            const updated_body = `**Status:** In Progress\n\n${issue_body}`;
+            const assignee = context.payload.issue.assignee.login;
+            const updated_body = issue_body.replace('**Status:** Open', '**Status:** In Progress').replace('**Assigned To:** Unassigned', `**Assigned To:** ${assignee}`);
 
             await github.rest.issues.update({
               owner: context.repo.owner,
@@ -71,7 +72,7 @@ jobs:
           script: |
             const issue_number = context.issue.number;
             const issue_body = context.payload.issue.body;
-            const updated_body = `**Status:** Closed\n\n${issue_body}`;
+            const updated_body = issue_body.replace('**Status:** In Progress', '**Status:** Closed');
 
             await github.rest.issues.update({
               owner: context.repo.owner,
