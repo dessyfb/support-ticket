@@ -3,6 +3,12 @@ description: Submit a support request here.
 title: "[SUPPORT] "
 labels: ["support"]
 body:
+  - type: markdown
+    attributes:
+      value: |
+        **Status:** Open
+        **Assigned To:** Unassigned
+
   - type: input
     id: name
     attributes:
